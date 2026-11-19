@@ -85,6 +85,8 @@ Se usó además **Carga natural** y scroll nativo para comprobar el comportamien
 
 ## QA realizado y límites
 
+La tabla conserva el QA visual de la entrega original. La revisión de repetición solo cambia el ciclo de activación en `welcome.js`, `opening-bridge.js` y `assets/firma.js`; no modifica el HTML de las demos, su CSS, las fotos, el MP4 ni el póster.
+
 | Comprobación | Resultado / evidencia |
 | --- | --- |
 | Portada, selector, CSS de bienvenida, JS de bienvenida, puente, MP4 y póster | **PASS.** Comparación byte a byte con el ZIP recibido. No se modificaron. |
@@ -95,7 +97,7 @@ Se usó además **Carga natural** y scroll nativo para comprobar el comportamien
 | Ancho 320 px | **PASS visual de layout.** Se corrigieron el tamaño de Palomino en 02, sus fichas y el rótulo “Por confirmar” en 03. En 01 los medallones se apilan. [01](evidencia/qa/01-small-post.jpg), [02](evidencia/qa/02-small-post.jpg), [03](evidencia/qa/03-small-post.jpg). |
 | Carga directa de 01, 02 y 03 | **PASS visual por HTTP local**, desde la carpeta descomprimida. Foto, nombre y credencial visibles. [02 directa](evidencia/qa/02-directa.jpg), [03 directa](evidencia/qa/03-directa.jpg). |
 | Coordinación con bienvenida | **PASS en recorrido real del selector.** Los animationstart registrados indican `bienvenida visible=false` y `opción activa=true`. Los documentos terminan en `sf-done`. El recuento es de eventos por capa CSS, no de openings completos. [Registro final escritorio](evidencia/qa/selector-desktop-log.txt), [registro móvil](evidencia/qa/selector-mobile-log.txt). |
-| Regresar a una opción | **PASS.** Se comparó el recuento antes/después de reseleccionar una opción terminada. La lógica mantiene un Set por documento y un marcador de gestos en el nombre del contexto del iframe (también persiste una restauración dentro del mismo marco); finaliza una animación en curso al ocultar la opción. No vuelve a armarla. |
+| Regresar a una opción | **Revisado.** Cada cambio rearma la apertura y el post-hero, conserva el iframe y vuelve al hero. La apertura se reproduce al activar la opción y el post-hero al entrar en pantalla. |
 | Activación post-hero | **PASS visual y lógico.** IntersectionObserver con márgenes de viewport; scroll nativo, sin fijar el documento, impedir wheel, pedir hover o añadir controles al producto. Se probaron entrada en pantalla y escenas finales. |
 | Enlaces Agenda | **PASS:** navegación interna conservada y agenda visible; todos los enlaces externos mantienen su URL original. **No se validó la disponibilidad actual de cada destino externo.** |
 | Motion reducido | **PASS lógico y revisión de composición final.** El JS finaliza todos los gestos si `matchMedia` indica reduce; el CSS desactiva animaciones y oculta ventanas redundantes. **PENDIENTE visual con la preferencia nativa activada:** esta sesión no expuso emulación del medio ni permitió verificar su activación. No se presenta el estado final ordinario como una captura de un dispositivo con reduce activo. |
@@ -103,7 +105,7 @@ Se usó además **Carga natural** y scroll nativo para comprobar el comportamien
 | Navegadores físicos y protocolo file:// | **PENDIENTE:** Safari/iOS, Android físico y doble clic local file://. HTTP local sí probado. El código conserva el intercambio de mensajes con origen `null` para file://. |
 | Rendimiento | Recursos locales y animaciones finitas con transform/opacity. **No se ejecutó Lighthouse ni se midieron FPS.** |
 
-La comprobación lógica se puede repetir con `node evidencia/qa/probar_lifecycle.cjs`: apertura directa, espera del selector, opción oculta, no repetición incluso tras restaurar el iframe, post por intersección, cierre de seguridad, reduce y falta de IntersectionObserver. Se complementa con la evidencia visual; no la sustituye.
+La comprobación lógica revisada se puede repetir con `node evidencia/qa/probar_lifecycle.cjs`. Ejecuta el código de producción con DOM simulado para verificar la espera de la portada, las reentradas a las tres pestañas y el post-hero por intersección. Las capturas de arriba son de la entrega anterior, no una prueba visual de esta revisión.
 
 ## Revisión visual rápida
 

@@ -1,60 +1,106 @@
-/* Original composition/motion. The parent bridge remains unchanged. */
+/* Cada visita a una pestaña rearma sus dos gestos sin recargar el documento. */
 (() => {
  'use strict';
- const root=document.documentElement, embedded=parent!==window;
+ const embedded=parent!==window, local=location.protocol==='file:';
  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
- const targets=[...document.querySelectorAll('[data-gesture]')];
- const used=new Set(); let allowed=!embedded;
- // A browsing-context marker also survives a same-frame document restoration.
- // Direct visits always animate; a newly opened selector has fresh iframe names.
- let visit='';
- try{if(embedded)visit=String(parent.performance.timeOrigin);}catch{/* file contexts can have opaque origins. */}
- const marker='gtl-rp-signature:'+root.dataset.rpOption+':'+visit+':';
- const seen=new Set(embedded&&String(window.name||'').startsWith(marker)?String(window.name).slice(marker.length).split(','):[]);
- const remember=node=>{if(embedded){seen.add(node.dataset.gesture);window.name=marker+[...seen].join(',');}};
  const supported='IntersectionObserver' in window;
- const running=new Map();
- function final(node){node.classList.remove('sf-wait','sf-playing');node.classList.add('sf-done');clearTimeout(running.get(node));running.delete(node);}
+ const targets=[...document.querySelectorAll('[data-gesture]')];
+ const openings=targets.filter(n=>n.dataset.gesture==='opening');
+ const posts=targets.filter(n=>n.dataset.gesture==='post');
+ const used=new Set(), running=new Map();
+ let active=!embedded, painted=false, queued=0, imageReady=false;
+ const eligible=()=>active&&painted&&!document.hidden;
+
+ function final(node){
+  clearTimeout(running.get(node)?.timer);
+  running.delete(node);
+  node.classList.remove('sf-wait','sf-playing');
+  node.classList.add('sf-done');
+ }
+ function arm(){
+  used.clear();
+  targets.forEach(node=>{
+   if(reduce.matches||!supported){used.add(node);final(node);return;}
+   node.classList.remove('sf-done','sf-playing');
+   node.classList.add('sf-wait');
+  });
+ }
  function play(node){
-   if(used.has(node)||!allowed||document.hidden)return;
-   used.add(node);remember(node);node.classList.remove('sf-wait');
-   if(reduce.matches||!supported){final(node);return;}
-   node.classList.add('sf-playing');
-   const animations=node.getAnimations?.({subtree:true})||[];
-   if(animations.length){
-    running.set(node,setTimeout(()=>final(node),2600));
-    Promise.allSettled(animations.map(a=>a.finished)).then(()=>final(node));
-   } else running.set(node,setTimeout(()=>final(node),2600));
+  if(used.has(node)||!eligible())return;
+  used.add(node);
+  if(reduce.matches||!supported){final(node);return;}
+  node.classList.remove('sf-wait','sf-done');
+  node.classList.add('sf-playing');
+  const run={};
+  running.set(node,run);
+  const close=()=>{if(running.get(node)===run)final(node);};
+  run.timer=setTimeout(close,2600);
+  const animations=node.getAnimations?.({subtree:true})||[];
+  if(animations.length)Promise.allSettled(animations.map(a=>a.finished)).then(close);
  }
- function opening(){if(allowed)targets.filter(n=>n.dataset.gesture==='opening').forEach(play);}
  function visiblePost(){
-  if(!allowed)return;
-  targets.filter(n=>n.dataset.gesture==='post').forEach(n=>{
-   const r=n.getBoundingClientRect();
-   if(r.top<innerHeight*.84&&r.bottom>innerHeight*.12)play(n);
+  if(!eligible())return;
+  posts.forEach(node=>{
+   if(used.has(node))return;
+   const r=node.getBoundingClientRect();
+   if(r.top<innerHeight*.84&&r.bottom>innerHeight*.12)play(node);
   });
  }
- targets.forEach(n=>{if(seen.has(n.dataset.gesture)){used.add(n);final(n);}else if(!reduce.matches&&supported)n.classList.add('sf-wait');else{used.add(n);remember(n);final(n);}});
- const io=supported?new IntersectionObserver(entries=>{
-   entries.forEach(e=>{if(e.isIntersecting&&allowed){play(e.target);if(used.has(e.target))io.unobserve(e.target);}});
- },{threshold:0,rootMargin:'-12% 0px -16% 0px'}):null;
- targets.filter(n=>n.dataset.gesture==='post').forEach(n=>io?.observe(n));
  function sync(){
-  if(!allowed||document.hidden){running.forEach((_,n)=>final(n));return;}
-  opening();visiblePost();
+  if(!eligible())return;
+  if(imageReady)openings.forEach(play);
+  visiblePost();
  }
- if(embedded){
-  addEventListener('message',e=>{
-   if(e.source!==parent||e.origin!==(location.protocol==='file:'?'null':location.origin))return;
-   if(e.data?.type!=='gtl-opening-visibility'||typeof e.data.visible!=='boolean')return;
-   allowed=e.data.visible;sync();
+ function queue(){
+  if(!active||document.hidden||painted||queued)return;
+  // Dejar que el iframe seleccionado se pinte después de la portada o el cambio.
+  queued=requestAnimationFrame(()=>{
+   queued=requestAnimationFrame(()=>{
+    queued=0;
+    if(!active||document.hidden)return;
+    painted=true;
+    sync();
+   });
   });
-  parent.postMessage({type:'gtl-opening-ready'},location.protocol==='file:'?'*':location.origin);
  }
- document.addEventListener('visibilitychange',sync);
- reduce.addEventListener('change',()=>{if(reduce.matches)targets.forEach(n=>{used.add(n);final(n);});});
- // The base image, name and credential never depend on this animation or on decoding.
- const images=[...document.querySelectorAll('.sf-scene img')];
- Promise.all(images.map(i=>i.decode?.().catch(()=>{}))).then(sync);
- sync();
+ function setActive(next){
+  if(active===next)return;
+  active=next;painted=false;
+  if(queued){cancelAnimationFrame(queued);queued=0;}
+  if(!active){targets.forEach(final);return;}
+  arm();
+  window.scrollTo({top:0,left:0,behavior:'instant'});
+  queue();
+ }
+
+ arm();
+ if(supported){
+  const observer=new IntersectionObserver(visiblePost,{threshold:0,rootMargin:'-12% 0px -16% 0px'});
+  posts.forEach(node=>observer.observe(node));
+ }
+ document.addEventListener('visibilitychange',()=>{
+  if(document.hidden)running.forEach((_,node)=>final(node));
+  else {queue();sync();}
+ });
+ reduce.addEventListener('change',()=>{
+  if(reduce.matches)targets.forEach(node=>{used.add(node);final(node);});
+ });
+
+ const photos=openings.flatMap(node=>[...node.querySelectorAll('img')]);
+ Promise.all(photos.map(img=>{
+  if(typeof img.decode==='function')return img.decode().catch(()=>{});
+  if(!img.complete)return new Promise(resolve=>{
+   img.addEventListener('load',resolve,{once:true});
+   img.addEventListener('error',resolve,{once:true});
+  });
+ })).then(()=>{imageReady=true;sync();});
+
+ if(embedded&&(local||/^https?:$/.test(location.protocol))){
+  addEventListener('message',e=>{
+   if(e.source!==parent||e.origin!==(local?'null':location.origin))return;
+   if(e.data?.type!=='gtl-opening-activation'||typeof e.data.active!=='boolean')return;
+   setActive(e.data.active);
+  });
+  parent.postMessage({type:'gtl-opening-ready'},local?'*':location.origin);
+ } else if(!embedded)queue();
 })();

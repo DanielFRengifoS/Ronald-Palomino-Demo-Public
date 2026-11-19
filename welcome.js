@@ -30,6 +30,8 @@
       frame.classList.toggle('is-on', active);
       if (active && !frame.getAttribute('src')) frame.src = frame.dataset.src;
     });
+    // Preloading during the door animation is not an activation.
+    if (welcome.hidden && !hub.hidden && !hub.hasAttribute('inert')) hub.dataset.openingDemo = id;
   }
 
   function commit(id, method) {
@@ -55,6 +57,7 @@
     cleanup();
     ++launchToken;
     launched = false;
+    delete hub.dataset.openingDemo;
     document.body.classList.remove('launching', 'revealing');
     welcome.hidden = false;
     hub.hidden = true;

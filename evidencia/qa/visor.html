@@ -3,19 +3,19 @@ const f=document.querySelector('iframe'), status=document.querySelector('#status
 const opt=document.querySelector('#opt'), vp=document.querySelector('#viewport'), gest=document.querySelector('#gesture');
 let mode='natural',sample=0,tick;
 function load(){f.name='';clearTimeout(tick);document.body.className=vp.value;f.src='../../'+opt.value+'/index.html?qa='+Date.now();}
-addEventListener('message',e=>{if(e.source===f.contentWindow&&e.data?.type==='gtl-opening-ready'&&mode==='natural')f.contentWindow.postMessage({type:'gtl-opening-visibility',visible:true},location.origin);});
 f.onload=()=>{
  const w=f.contentWindow,d=f.contentDocument;
- if(mode==='sample'){const nativeTimer=w.setTimeout.bind(w);w.setTimeout=(fn,ms,...args)=>ms===2600?0:nativeTimer(fn,ms,...args);w.postMessage({type:'gtl-opening-visibility',visible:true},location.origin);}
+ if(mode==='sample'){const nativeTimer=w.setTimeout.bind(w);w.setTimeout=(fn,ms,...args)=>ms===2600?0:nativeTimer(fn,ms,...args);}
+ w.postMessage({type:'gtl-opening-activation',active:true},location.origin);
 
  setTimeout(()=>{document.querySelector("#checks").textContent=` · ancho ${w.innerWidth}/${d.documentElement.scrollWidth} · fotos ${[...d.images].filter(i=>i.complete&&i.naturalWidth>0).length}/${d.images.length} · reduce ${w.matchMedia("(prefers-reduced-motion: reduce)").matches}`;},700);
- if(gest.value==='post')w.scrollTo(0,d.querySelector('.sf-post').getBoundingClientRect().top+w.scrollY-30);
+ if(gest.value==='post')setTimeout(()=>w.scrollTo(0,d.querySelector('.sf-post').getBoundingClientRect().top+w.scrollY-30),100);
  if(mode==='natural'){status.textContent='Natural · '+vp.value+' · '+opt.value;return;}
  let attempts=0;function freeze(){
   const node=d.querySelector('[data-gesture="'+gest.value+'"]'), a=node.getAnimations({subtree:true});
   if(!a.length&&attempts++<90){tick=setTimeout(freeze,16);return;}
   a.forEach(x=>{x.pause();x.currentTime=sample;});
-  // The production cleanup timer is 2300ms. Keep the real CSS animation alive only in this QA document.
+  // Keep the real CSS animation alive only in this QA document.
   status.textContent='Fotograma '+gest.value+' · '+sample+' ms · '+a.length+' animaciones';
  }
  freeze();
