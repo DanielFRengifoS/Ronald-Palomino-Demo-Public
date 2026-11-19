@@ -1,0 +1,172 @@
+Browser tab: 14, Title: "QA · Selector original", URL: "http://127.0.0.1:4173/evidencia/qa/selector.html".
+1 AXWebArea QA · Selector original, URL: 127.0.0.1:4173/evidencia/qa/selector.html
+	2 container
+		3 button Selector escritorio
+		4 button Selector móvil
+		489 text Bienvenida terminada · animationstart {"01/opening":3,"02/opening":3,"03/opening":3} · estados frame-01:sf-scene sf-done / frame-02:sf-scene sf-done / frame-03:sf-scene sf-done
+		340 text 01/opening · court-register · bienvenida visible=false · opción activa=true
+01/opening · lens-left · bienvenida visible=false · opción activa=true
+01/opening · lens-right · bienvenida visible=false · opción activa=true
+02/opening · card-register · bienvenida visible=false · opción activa=true
+02/opening · card-a · bienvenida visible=false · opción activa=true
+02/opening · card-b · bienvenida visible=false · opción activa=true
+03/opening · strip-register · bienvenida visible=false · opción activa=true
+03/opening · strip-register · bienvenida visible=false · opción activa=true
+03/opening · strip-register · bienvenida visible=false · opción activa=true
+
+	6 container Bienvenida y selector originales
+		9 AXWebArea Ronald Palomino · Presentación por GTL AI, URL: 127.0.0.1:4173/index.html?qa=1795095396819#01
+			10 container Demos de Ronald Palomino
+				11 tab group Elegir demo
+					12 tab (selected, settable, boolean) Description: 01 · La dupla que vuelve, Value: 1, ID: tab-01
+					13 tab (selectable, settable, boolean) Description: 02 · Dos títulos, dos fichas, Value: 0, ID: tab-02
+					14 tab (selectable, settable, boolean) Description: 03 · Después de la segunda ronda, Value: 0, ID: tab-03
+				342 container Description: La dupla que vuelve, ID: frame-01
+					343 AXWebArea Ronald Palomino — La dupla que vuelve, URL: 127.0.0.1:4173/01/index.html
+						344 link Description: Saltar al contenido, Value: 127.0.0.1:4173/01/index.html#contenido
+						345 container
+							346 link Description: RP / SQUASH, Value: 127.0.0.1:4173/01/index.html#contenido
+							347 text 01 / LA DUPLA QUE VUELVE
+						348 container contenido
+							349 container Ronald Palomino
+								350 heading Ronald Palomino, Value: 1, ID: nombre
+									351 text Ronald  Palomino
+								352 text Jugador colombiano de squash profesional.
+								353 text Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.
+								354 text Del podio continental al circuito profesional
+								355 container En esta página
+									356 link Description: Ver agenda, Value: 127.0.0.1:4173/01/index.html#agenda
+									357 link Description: Colaboración, Value: 127.0.0.1:4173/01/index.html#colaboracion
+								358 container
+									359 image Ronald Palomino estira la raqueta hacia la pelota sobre la cancha de squash.
+									360 text ORO PANAMERICANO
+									361 text SANTIAGO 2023 / DOBLES Acción en cancha · foto de archivo
+									362 link Description: Suministrada por Ronald Palomino, según El País, Value: elpais.com.co/deportes/del-barrio-melendez-de-cali-a-los-angeles-2028-el-sueno-olimpico-de-ronald-palomino-0527.html
+								363 container Dos años. La misma conexión.
+									364 container
+										365 text LA DUPLA QUE VUELVE / DOBLES MASCULINOS
+										366 heading Dos años. La misma conexión., Value: 2, ID: sf-p-title
+											367 text Dos años.
+											368 text La misma conexión.
+									369 container
+										370 text 2023
+										371 heading Santiago, Value: 3
+											372 text Santiago
+										373 text XIX Juegos Panamericanos
+										374 text Oro en dobles
+										375 text 2025
+										376 heading Río, Value: 3
+											377 text Río
+										378 text Panamericano de Mayores
+										379 text Campeones de dobles
+										380 text Ronald Palomino
+										381 text ×
+										382 text Juan Camilo Vargas
+									383 container
+										384 text Dos certámenes diferentes. Una dupla que repite.
+										385 link Description: Resultado de Río · COC, Value: olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/
+								386 container FINAL DE DOBLES MASCULINOS SANTIAGO 2023
+									387 container final-label
+										388 text FINAL DE DOBLES MASCULINOS SANTIAGO 2023
+									389 text Colombia
+									390 text 2–1
+									391 text México Ronald Palomino Juan Camilo Vargas
+							392 container Misma dupla, dos certámenes
+								393 text 01 / DOBLES MASCULINOS
+								394 heading Misma dupla, dos certámenes, Value: 2, ID: dupla
+									395 text Misma dupla, dos certámenes
+								396 container
+									397 text SANTIAGO 2023
+									398 heading XIX Juegos Panamericanos, Value: 3
+										399 text XIX Juegos Panamericanos
+									400 text Ronald Palomino Juan Camilo Vargas
+									401 text Oro en dobles masculinos
+									402 text RÍO 2025
+									403 heading Campeonato Panamericano de Mayores, Value: 3
+										404 text Campeonato Panamericano de Mayores
+									405 text Ronald Palomino Juan Camilo Vargas
+									406 text Campeones de dobles masculinos
+								407 container
+									408 text Fuentes: 
+									409 link Description: Panam Sports, Value: panamsports.org/noticias-deportivas/colombia-logra-dos-oros-en-jornada-de-finales-del-squash/
+									410 text  y 
+									411 link Description: PanAm Squash, Value: panamsquash.com/2023/11/usa-tops-medal-count-at-pan-am-games/
+									412 text  (Santiago); 
+									413 link Description: Comité Olímpico Colombiano, Value: olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/
+									414 text  (Río).
+							415 container Otra dupla, dos podios
+								416 text 02 / DOBLES MIXTOS
+								417 heading Otra dupla, dos podios, Value: 2, ID: mixtos
+									418 text Otra dupla, dos podios
+								419 text Con Lucía Bautista Sarmiento en los dos podios de dobles mixtos.
+								420 link Description: Ver resultados por certamen en la agenda , Value: 127.0.0.1:4173/01/index.html#agenda
+								421 container
+									422 text ASUNCIÓN 2026
+									423 heading XXVII Campeonato Panamericano Senior, Value: 3
+										424 text XXVII Campeonato Panamericano Senior
+									425 text Oro en dobles mixtos
+								426 container
+									427 text ROSARIO 2026
+									428 heading XIII Juegos Suramericanos Santa Fe, Value: 3
+										429 text XIII Juegos Suramericanos Santa Fe
+									430 text Bronce en dobles mixtos
+							431 container Propuesta por validar: sesiones de dobles, ID: colaboracion
+								432 text 03 / COLABORACIÓN
+								433 heading Propuesta por validar: sesiones de dobles, Value: 2, ID: apoyo
+									434 text Propuesta por validar: sesiones de dobles
+								435 text Un bloque de horas de cancha y preparación física para trabajar el paso del individual al dobles.
+								436 text Antes de proponerlo, el equipo técnico debe validar la disponibilidad de pareja, la carga y el costo.
+								437 container
+									438 text Siguiente paso con el equipo:  validar un bloque de dobles.
+							439 container Agenda, ID: agenda
+								440 text 04 / CALENDARIO Y RESULTADOS
+								441 heading Agenda, Value: 2, ID: agenda-title
+									442 text Agenda
+								443 heading Próximos torneos, Value: 3
+									444 text Próximos torneos
+								445 container
+									446 text Corte:  19 de noviembre de 2026 .
+								447 text Sin participaciones individuales confirmadas al corte.
+								448 heading Archivo de torneos disputados, Value: 3
+									449 text Archivo de torneos disputados
+								450 content list
+									451 container
+										452 text DISPUTADO Rango de fechas de squash no consignado
+										453 heading XIX Juegos Panamericanos Santiago 2023, Value: 4
+											454 text XIX Juegos Panamericanos Santiago 2023
+										455 text Centro de Raquetas del Estadio Nacional, Santiago, Chile · Squash: dobles masculinos y equipos masculinos Oro en dobles con Juan Camilo Vargas (H01) y oro por equipos (H02). Fechas de las crónicas, no del rango de competencia: 2023-11-04 y 2023-11-05. Equipos: 
+										456 link Description: www.panamsports.org, Value: panamsports.org/noticias-deportivas/colombia-y-estados-unidos-fueron-los-lideres-del-squash-en-santiago-2023/
+										457 link Description: Consultar fuente del certamen, Value: panamsports.org/noticias-deportivas/colombia-logra-dos-oros-en-jornada-de-finales-del-squash/
+									458 container
+										459 text DISPUTADO Del 21 de agosto de 2025 al 27 de agosto de 2025
+										460 heading Campeonato Panamericano de Mayores de squash — Río de Janeiro 2025, Value: 4
+											461 text Campeonato Panamericano de Mayores de squash — Río de Janeiro 2025
+										462 text Río de Janeiro, Brasil · Individual masculino y dobles masculinos Campeón en ambas modalidades (H03); dobles con Juan Vargas: 
+										463 link Description: olimpicocol.co, Value: olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/
+										464 link Description: Consultar fuente del certamen, Value: olimpicocol.co/web/ronald-palomino-campeon-del-panamericano-de-mayores-de-squash/
+									465 container
+										466 text DISPUTADO Del 15 de agosto de 2026 al 22 de agosto de 2026
+										467 heading XXVII Campeonato Panamericano Senior — Asunción 2026, Value: 4
+											468 text XXVII Campeonato Panamericano Senior — Asunción 2026
+										469 text Asunción, Paraguay · Dobles mixtos Oro con Lucía Bautista Sarmiento (H04). Fechas de todo el campeonato: 
+										470 link Description: panamsquash.com, Value: panamsquash.com/events/2026-senior-asuncion/
+										471 link Description: Consultar fuente del certamen, Value: panamsquash.com/2026/08/colombia-shines-as-pan-american-doubles-champions-in-asuncion-2026/
+									472 container
+										473 text DISPUTADO Del 21 de septiembre de 2026 al 26 de septiembre de 2026
+										474 heading XIII Juegos Suramericanos Santa Fe 2026, Value: 4
+											475 text XIII Juegos Suramericanos Santa Fe 2026
+										476 text La Rural Nave C, Rosario, Argentina · Squash: individual masculino y dobles mixtos Bronce individual y bronce con Lucía Bautista (H05). Fechas y sede de squash: 
+										477 link Description: santafe2026.ar, Value: santafe2026.ar/node/619
+										478 link Description: Consultar fuente del certamen, Value: olimpicocol.co/web/colombia-se-consagro-campeon-del-squash-en-santa-fe-2026/
+									479 container
+										480 text DISPUTADO Del 10 de noviembre de 2026 al 14 de noviembre de 2026
+										481 heading SACC Costa Rica Open 2026, Value: 4
+											482 text SACC Costa Rica Open 2026
+										483 text Santa Ana Country Club, Santa Ana, Costa Rica · Individual masculino FollowSquash (secundaria) documenta que Andrés Herrera avanzó frente a Palomino en segunda ronda. No se usa el parcial ni se infiere motivo de cierre del partido. Sede y fechas del organizador: 
+										484 link Description: www.crsquashopen.com, Value: crsquashopen.com/
+										485 link Description: Consultar fuente del certamen, Value: followsquash.com/tournaments/212
+						486 container
+							487 text Ronald Palomino / Squash
+							488 link Description: Volver al inicio ↑, Value: 127.0.0.1:4173/01/index.html#contenido
+
+The focused UI element is 12 tab (selected, settable, boolean) Description: 01 · La dupla que vuelve, Value: 1, ID: tab-01

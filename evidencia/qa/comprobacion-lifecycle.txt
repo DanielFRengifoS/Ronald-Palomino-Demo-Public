@@ -1,0 +1,1 @@
+PASS: directo, espera de bienvenida, opción oculta, no repetición incluso tras restaurar el iframe, post por intersección, watchdog, preferencia reduce y ausencia de IntersectionObserver.

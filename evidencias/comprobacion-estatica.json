@@ -1,0 +1,183 @@
+{
+  "enlaces": {
+    "index.html": {
+      "locales": 12,
+      "fallas": [],
+      "externos": []
+    },
+    "01/index.html": {
+      "locales": 16,
+      "fallas": [],
+      "externos": [
+        "https://followsquash.com/tournaments/212",
+        "https://olimpicocol.co/web/colombia-se-consagro-campeon-del-squash-en-santa-fe-2026/",
+        "https://olimpicocol.co/web/ronald-palomino-campeon-del-panamericano-de-mayores-de-squash/",
+        "https://olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/",
+        "https://panamsquash.com/2023/11/usa-tops-medal-count-at-pan-am-games/",
+        "https://panamsquash.com/2026/08/colombia-shines-as-pan-american-doubles-champions-in-asuncion-2026/",
+        "https://panamsquash.com/events/2026-senior-asuncion/",
+        "https://santafe2026.ar/node/619",
+        "https://www.crsquashopen.com/",
+        "https://www.elpais.com.co/deportes/del-barrio-melendez-de-cali-a-los-angeles-2028-el-sueno-olimpico-de-ronald-palomino-0527.html",
+        "https://www.panamsports.org/noticias-deportivas/colombia-logra-dos-oros-en-jornada-de-finales-del-squash/",
+        "https://www.panamsports.org/noticias-deportivas/colombia-y-estados-unidos-fueron-los-lideres-del-squash-en-santiago-2023/"
+      ]
+    },
+    "02/index.html": {
+      "locales": 18,
+      "fallas": [],
+      "externos": [
+        "https://followsquash.com/tournaments/212",
+        "https://olimpicocol.co/web/colombia-se-consagro-campeon-del-squash-en-santa-fe-2026/",
+        "https://olimpicocol.co/web/ronald-palomino-campeon-del-panamericano-de-mayores-de-squash/",
+        "https://olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/",
+        "https://panamsquash.com/2026/08/colombia-shines-as-pan-american-doubles-champions-in-asuncion-2026/",
+        "https://panamsquash.com/events/2026-senior-asuncion/",
+        "https://santafe2026.ar/node/619",
+        "https://www.crsquashopen.com/",
+        "https://www.panamsports.org/noticias-deportivas/colombia-logra-dos-oros-en-jornada-de-finales-del-squash/",
+        "https://www.panamsports.org/noticias-deportivas/colombia-y-estados-unidos-fueron-los-lideres-del-squash-en-santiago-2023/"
+      ]
+    },
+    "03/index.html": {
+      "locales": 17,
+      "fallas": [],
+      "externos": [
+        "https://followsquash.com/tournaments/212",
+        "https://olimpicocol.co/web/colombia-se-consagro-campeon-del-squash-en-santa-fe-2026/",
+        "https://olimpicocol.co/web/ronald-palomino-campeon-del-panamericano-de-mayores-de-squash/",
+        "https://olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/",
+        "https://panamsquash.com/2026/08/colombia-shines-as-pan-american-doubles-champions-in-asuncion-2026/",
+        "https://panamsquash.com/events/2026-senior-asuncion/",
+        "https://santafe2026.ar/node/619",
+        "https://unsquashable.com/blogs/world-tour-highlights/ronald-palomino-wins-psa-spac-squash-open-in-sao-paulo-brazil",
+        "https://www.crsquashopen.com/",
+        "https://www.elpais.com.co/deportes/del-barrio-melendez-de-cali-a-los-angeles-2028-el-sueno-olimpico-de-ronald-palomino-0527.html",
+        "https://www.panamsports.org/noticias-deportivas/colombia-logra-dos-oros-en-jornada-de-finales-del-squash/",
+        "https://www.panamsports.org/noticias-deportivas/colombia-y-estados-unidos-fueron-los-lideres-del-squash-en-santiago-2023/"
+      ]
+    }
+  },
+  "agendas": {
+    "01": {
+      "fecha_json": "2026-11-19",
+      "corte_visible": true,
+      "eventos": [
+        {
+          "id": "E01",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E02",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E03",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E04",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E05",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E06",
+          "estado_json": "por_validar",
+          "visible": false,
+          "diferencias": []
+        }
+      ]
+    },
+    "02": {
+      "fecha_json": "2026-11-19",
+      "corte_visible": true,
+      "eventos": [
+        {
+          "id": "E01",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E02",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E03",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E04",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E05",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E06",
+          "estado_json": "por_validar",
+          "visible": false,
+          "diferencias": []
+        }
+      ]
+    },
+    "03": {
+      "fecha_json": "2026-11-19",
+      "corte_visible": true,
+      "eventos": [
+        {
+          "id": "E01",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E02",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E03",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E04",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        },
+        {
+          "id": "E05",
+          "estado_json": "disputado",
+          "visible": true,
+          "diferencias": []
+        }
+      ]
+    }
+  }
+}

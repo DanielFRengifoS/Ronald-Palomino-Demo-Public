@@ -1,0 +1,88 @@
+{
+  "fecha_revision": "2026-11-19",
+  "criterio": "Las fechas corresponden a la disciplina o al campeonato indicado; los extremos nulos no se completan con fechas de publicación. confirmado = participación individual respaldada; cuadro_publico = aparece en listado sin prueba de asistencia; disputado = resultado documentado; por_validar = no anunciar al atleta. Para próximos torneos públicos, exigir confirmado y fecha de inicio futura. Al corte, no hay próximos torneos confirmados ni cuadros futuros localizados con su nombre.",
+  "eventos": [
+    {
+      "id": "E01",
+      "nombre": "XIX Juegos Panamericanos Santiago 2023",
+      "inicio": null,
+      "fin": null,
+      "lugar": "Centro de Raquetas del Estadio Nacional, Santiago, Chile",
+      "modalidad": "Squash: dobles masculinos y equipos masculinos",
+      "estado": "disputado",
+      "fuente_url": "https://www.panamsports.org/noticias-deportivas/colombia-logra-dos-oros-en-jornada-de-finales-del-squash/",
+      "revisado_el": "2026-11-19",
+      "nota": "Oro en dobles con Juan Camilo Vargas (H01) y oro por equipos (H02). Fechas de las crónicas, no del rango de competencia: 2023-11-04 y 2023-11-05. Equipos: https://www.panamsports.org/noticias-deportivas/colombia-y-estados-unidos-fueron-los-lideres-del-squash-en-santiago-2023/"
+    },
+    {
+      "id": "E02",
+      "nombre": "Campeonato Panamericano de Mayores de squash — Río de Janeiro 2025",
+      "inicio": "2025-08-21",
+      "fin": "2025-08-27",
+      "lugar": "Río de Janeiro, Brasil",
+      "modalidad": "Individual masculino y dobles masculinos",
+      "estado": "disputado",
+      "fuente_url": "https://olimpicocol.co/web/ronald-palomino-campeon-del-panamericano-de-mayores-de-squash/",
+      "revisado_el": "2026-11-19",
+      "nota": "Campeón en ambas modalidades (H03); dobles con Juan Vargas: https://olimpicocol.co/web/ronald-palomino-y-juan-vargas-campeones-en-el-panamericano-de-mayores-de-squash/"
+    },
+    {
+      "id": "E03",
+      "nombre": "XXVII Campeonato Panamericano Senior — Asunción 2026",
+      "inicio": "2026-08-15",
+      "fin": "2026-08-22",
+      "lugar": "Asunción, Paraguay",
+      "modalidad": "Dobles mixtos",
+      "estado": "disputado",
+      "fuente_url": "https://panamsquash.com/2026/08/colombia-shines-as-pan-american-doubles-champions-in-asuncion-2026/",
+      "revisado_el": "2026-11-19",
+      "nota": "Oro con Lucía Bautista Sarmiento (H04). Fechas de todo el campeonato: https://panamsquash.com/events/2026-senior-asuncion/"
+    },
+    {
+      "id": "E04",
+      "nombre": "XIII Juegos Suramericanos Santa Fe 2026",
+      "inicio": "2026-09-21",
+      "fin": "2026-09-26",
+      "lugar": "La Rural Nave C, Rosario, Argentina",
+      "modalidad": "Squash: individual masculino y dobles mixtos",
+      "estado": "disputado",
+      "fuente_url": "https://olimpicocol.co/web/colombia-se-consagro-campeon-del-squash-en-santa-fe-2026/",
+      "revisado_el": "2026-11-19",
+      "nota": "Bronce individual y bronce con Lucía Bautista (H05). Fechas y sede de squash: https://santafe2026.ar/node/619"
+    },
+    {
+      "id": "E05",
+      "nombre": "SACC Costa Rica Open 2026",
+      "inicio": "2026-11-10",
+      "fin": "2026-11-14",
+      "lugar": "Santa Ana Country Club, Santa Ana, Costa Rica",
+      "modalidad": "Individual masculino",
+      "estado": "disputado",
+      "fuente_url": "https://followsquash.com/tournaments/212",
+      "revisado_el": "2026-11-19",
+      "nota": "FollowSquash (secundaria) documenta que Andrés Herrera avanzó frente a Palomino en segunda ronda. No se usa el parcial ni se infiere motivo de cierre del partido. Sede y fechas del organizador: https://www.crsquashopen.com/"
+    },
+    {
+      "id": "E06",
+      "nombre": "XX Juegos Panamericanos Lima 2027",
+      "inicio": "2027-07-25",
+      "fin": "2027-08-01",
+      "lugar": "Canchas de Squash, Lima, Perú",
+      "modalidad": "Squash; prueba del atleta por validar",
+      "estado": "por_validar",
+      "fuente_url": "https://www.panamsports.org/lima-2027/",
+      "revisado_el": "2026-11-19",
+      "nota": "Ventana oficial de squash sujeta a cambios, no convocatoria. Colombia está clasificada en equipos masculinos; no confirma nominación de Palomino ni cupo olímpico. https://www.panamsquash.com/2026/08/colombia-crowned-champion-lima-2027-qualifiers-confirmed-as-historic-asuncion-2026-comes-to-a-close/"
+    }
+  ],
+  "aspiraciones": [
+    {
+      "id": "A01",
+      "objetivo": "Representar a Colombia en Los Ángeles 2028",
+      "estado": "declarado",
+      "fecha_fuente": "2025-10-05",
+      "fuente_url": "https://www.elpais.com.co/amp/deportes/del-barrio-melendez-de-cali-a-los-angeles-2028-el-sueno-olimpico-de-ronald-palomino-0527.html",
+      "nota": "Aspiración pública; confirmar vigencia y redacción con el equipo. No es un evento de su agenda ni una clasificación."
+    }
+  ]
+}

@@ -1,0 +1,693 @@
+{
+  "portada-390": [
+    "empezar-demo",
+    "solid"
+  ],
+  "01-hub-390": {
+    "core": {
+      "viewport": [
+        390,
+        791
+      ],
+      "overflow": 0,
+      "esenciales": [
+        [
+          "ASPIRACIÓN OLÍMPICA, NO CLASIFICACIÓN.",
+          135,
+          150
+        ],
+        [
+          "Ronald Palomino",
+          181,
+          234
+        ],
+        [
+          "Jugador colombiano de squash profesional.",
+          242,
+          262
+        ],
+        [
+          "Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.",
+          270,
+          340
+        ]
+      ],
+      "foto": [
+        [
+          true,
+          1100
+        ]
+      ]
+    },
+    "geometry_open": [
+      [
+        0,
+        0,
+        350,
+        337
+      ],
+      [
+        0,
+        0,
+        350,
+        337
+      ]
+    ],
+    "focus_tab": "tab-01",
+    "final": {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-dupla sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-accion-cancha.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19"
+      ]
+    }
+  },
+  "02-hub-390": {
+    "core": {
+      "viewport": [
+        390,
+        791
+      ],
+      "overflow": 0,
+      "esenciales": [
+        [
+          "ASPIRACIÓN OLÍMPICA, NO CLASIFICACIÓN.",
+          149,
+          164
+        ],
+        [
+          "RONALD PALOMINO",
+          194,
+          299
+        ],
+        [
+          "Jugador colombiano de squash profesional.",
+          307,
+          327
+        ],
+        [
+          "Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.",
+          343,
+          414
+        ]
+      ],
+      "foto": [
+        [
+          true,
+          1080
+        ]
+      ]
+    },
+    "geometry_open": [
+      [
+        18,
+        18,
+        314,
+        271
+      ],
+      [
+        18,
+        18,
+        314,
+        271
+      ]
+    ],
+    "focus_tab": "tab-02",
+    "final": {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-fichas sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-archivo-deportivo.webp",
+          true,
+          1080
+        ],
+        [
+          "../assets/fotos/ronald-retrato-raqueta.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19",
+        "2025-08-21",
+        "2025-08-27",
+        "2026-08-15",
+        "2026-08-22",
+        "2026-09-21",
+        "2026-09-26",
+        "2026-11-10",
+        "2026-11-14"
+      ]
+    }
+  },
+  "03-hub-390": {
+    "core": {
+      "viewport": [
+        390,
+        791
+      ],
+      "overflow": 0,
+      "esenciales": [
+        [
+          "ASPIRACIÓN OLÍMPICA, NO CLASIFICACIÓN.",
+          133,
+          148
+        ],
+        [
+          "Ronald Palomino",
+          170,
+          275
+        ],
+        [
+          "Jugador colombiano de squash profesional.",
+          283,
+          303
+        ],
+        [
+          "Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.",
+          317,
+          388
+        ]
+      ],
+      "foto": [
+        [
+          true,
+          733
+        ]
+      ]
+    },
+    "geometry_open": [
+      [
+        0,
+        0,
+        350,
+        340
+      ],
+      [
+        0,
+        0,
+        350,
+        340
+      ]
+    ],
+    "focus_tab": "tab-03",
+    "final": {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-registro sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-campestre-cali.webp",
+          true,
+          733
+        ],
+        [
+          "../assets/fotos/ronald-trofeo-spac.webp",
+          true,
+          1100
+        ],
+        [
+          "../assets/fotos/ronald-trofeo-spac.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19",
+        "2026-11-19",
+        "2025-08-21",
+        "2025-08-27",
+        "2026-08-15",
+        "2026-08-22",
+        "2026-09-21",
+        "2026-09-26",
+        "2026-11-10",
+        "2026-11-14"
+      ]
+    }
+  },
+  "hub-390-regreso": [
+    {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-dupla sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-accion-cancha.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19"
+      ]
+    },
+    "tab-01"
+  ],
+  "hub-390-history": "http://localhost:8765/#01",
+  "01-directo-390": {
+    "core": {
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "esenciales": [
+        [
+          "ASPIRACIÓN OLÍMPICA, NO CLASIFICACIÓN.",
+          177,
+          192
+        ],
+        [
+          "Ronald Palomino",
+          223,
+          276
+        ],
+        [
+          "Jugador colombiano de squash profesional.",
+          284,
+          304
+        ],
+        [
+          "Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.",
+          312,
+          382
+        ]
+      ],
+      "foto": [
+        [
+          true,
+          1100
+        ]
+      ]
+    },
+    "geometry_open": [
+      [
+        0,
+        0,
+        350,
+        337
+      ],
+      [
+        0,
+        0,
+        350,
+        337
+      ]
+    ],
+    "post_antes": "sf-post sf-dupla sf-wait",
+    "geometry_post": [
+      [
+        808,
+        0,
+        350,
+        529
+      ],
+      [
+        808,
+        0,
+        350,
+        529
+      ]
+    ],
+    "primer_tab": [
+      "← Portada",
+      "solid",
+      "rgb(163, 245, 214)"
+    ],
+    "anclas": {
+      "agenda": [
+        "agenda",
+        16,
+        [
+          "solid",
+          "rgb(128, 85, 25)"
+        ],
+        "agenda"
+      ],
+      "colaboracion": [
+        "colaboracion",
+        16,
+        [
+          "solid",
+          "rgb(128, 85, 25)"
+        ],
+        "colaboracion"
+      ]
+    },
+    "final": {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-dupla sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-accion-cancha.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19"
+      ]
+    }
+  },
+  "02-directo-390": {
+    "core": {
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "esenciales": [
+        [
+          "ASPIRACIÓN OLÍMPICA, NO CLASIFICACIÓN.",
+          191,
+          206
+        ],
+        [
+          "RONALD PALOMINO",
+          236,
+          341
+        ],
+        [
+          "Jugador colombiano de squash profesional.",
+          349,
+          369
+        ],
+        [
+          "Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.",
+          385,
+          456
+        ]
+      ],
+      "foto": [
+        [
+          true,
+          1080
+        ]
+      ]
+    },
+    "geometry_open": [
+      [
+        18,
+        18,
+        314,
+        271
+      ],
+      [
+        18,
+        18,
+        314,
+        271
+      ]
+    ],
+    "post_antes": "sf-post sf-fichas sf-wait",
+    "geometry_post": [
+      [
+        881,
+        0,
+        350,
+        695
+      ],
+      [
+        881,
+        0,
+        350,
+        695
+      ]
+    ],
+    "primer_tab": [
+      "← Portada",
+      "solid",
+      "rgb(163, 245, 214)"
+    ],
+    "anclas": {
+      "agenda": [
+        "agenda",
+        16,
+        [
+          "solid",
+          "rgb(145, 61, 26)"
+        ],
+        ""
+      ],
+      "colaboracion": [
+        "colaboracion",
+        331,
+        [
+          "solid",
+          "rgb(145, 61, 26)"
+        ],
+        "colaboracion"
+      ]
+    },
+    "final": {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-fichas sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-archivo-deportivo.webp",
+          true,
+          1080
+        ],
+        [
+          "../assets/fotos/ronald-retrato-raqueta.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19",
+        "2025-08-21",
+        "2025-08-27",
+        "2026-08-15",
+        "2026-08-22",
+        "2026-09-21",
+        "2026-09-26",
+        "2026-11-10",
+        "2026-11-14"
+      ]
+    }
+  },
+  "03-directo-390": {
+    "core": {
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "esenciales": [
+        [
+          "ASPIRACIÓN OLÍMPICA, NO CLASIFICACIÓN.",
+          175,
+          190
+        ],
+        [
+          "Ronald Palomino",
+          212,
+          317
+        ],
+        [
+          "Jugador colombiano de squash profesional.",
+          325,
+          345
+        ],
+        [
+          "Oro en dobles masculinos de squash en los XIX Juegos Panamericanos Santiago 2023, junto a Juan Camilo Vargas.",
+          359,
+          430
+        ]
+      ],
+      "foto": [
+        [
+          true,
+          733
+        ]
+      ]
+    },
+    "geometry_open": [
+      [
+        0,
+        0,
+        350,
+        340
+      ],
+      [
+        0,
+        0,
+        350,
+        340
+      ]
+    ],
+    "post_antes": "sf-post sf-registro sf-wait",
+    "geometry_post": [
+      [
+        879,
+        0,
+        350,
+        803
+      ],
+      [
+        879,
+        0,
+        350,
+        803
+      ]
+    ],
+    "primer_tab": [
+      "← Portada",
+      "solid",
+      "rgb(163, 245, 214)"
+    ],
+    "anclas": {
+      "agenda": [
+        "agenda",
+        16,
+        [
+          "solid",
+          "rgb(36, 76, 101)"
+        ],
+        "agenda"
+      ],
+      "colaboracion": [
+        "colaboracion",
+        273,
+        [
+          "solid",
+          "rgb(36, 76, 101)"
+        ],
+        "colaboracion"
+      ]
+    },
+    "final": {
+      "shifts": [],
+      "estados": [
+        [
+          "opening",
+          "sf-scene sf-done"
+        ],
+        [
+          "post",
+          "sf-post sf-registro sf-done"
+        ]
+      ],
+      "imgs": [
+        [
+          "../assets/fotos/ronald-campestre-cali.webp",
+          true,
+          733
+        ],
+        [
+          "../assets/fotos/ronald-trofeo-spac.webp",
+          true,
+          1100
+        ],
+        [
+          "../assets/fotos/ronald-trofeo-spac.webp",
+          true,
+          1100
+        ]
+      ],
+      "inicios": [
+        "opening",
+        "post"
+      ],
+      "agenda": [
+        "2026-11-19",
+        "2026-11-19",
+        "2025-08-21",
+        "2025-08-27",
+        "2026-08-15",
+        "2026-08-22",
+        "2026-09-21",
+        "2026-09-26",
+        "2026-11-10",
+        "2026-11-14"
+      ]
+    }
+  },
+  "errores": []
+}

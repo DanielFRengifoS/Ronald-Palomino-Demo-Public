@@ -1,0 +1,24 @@
+{
+  "portada_selector_video_poster_bridge": "idénticos byte por byte",
+  "01": {
+    "nombre_credencial_agenda": "HTML exacto conservado",
+    "enlaces_originales": 24,
+    "imagenes": 1,
+    "post": "inmediatamente después de figura hero",
+    "ids": "sin duplicados"
+  },
+  "02": {
+    "nombre_credencial_agenda": "HTML exacto conservado",
+    "enlaces_originales": 26,
+    "imagenes": 2,
+    "post": "inmediatamente después de figura hero",
+    "ids": "sin duplicados"
+  },
+  "03": {
+    "nombre_credencial_agenda": "HTML exacto conservado",
+    "enlaces_originales": 21,
+    "imagenes": 3,
+    "post": "inmediatamente después de figura hero",
+    "ids": "sin duplicados"
+  }
+}

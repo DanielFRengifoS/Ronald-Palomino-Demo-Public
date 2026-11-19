@@ -1,0 +1,27 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QA · Ronald · Fotogramas controlados</title><style>*{box-sizing:border-box}body{margin:0;background:#ddd;font:13px system-ui}header{position:sticky;top:0;background:#fff;padding:8px;z-index:9;display:flex;flex-wrap:wrap;gap:6px;align-items:center}button,select{padding:7px}#screen{display:block;width:calc(100% - 24px);height:800px;margin:12px auto;border:0;background:white}#status{font-weight:bold}body.mobile #screen{width:390px;height:844px;max-width:100%}body.small #screen{width:320px;height:760px;max-width:100%}</style><header><select id="opt" aria-label="Opción"><option>01</option><option>02</option><option>03</option></select><select id="viewport" aria-label="Tamaño"><option value="desktop">Escritorio</option><option value="mobile">Móvil 390</option><option value="small">Móvil 320</option></select><select id="gesture" aria-label="Gesto"><option value="opening">Opening</option><option value="post">Post-hero</option></select><button onclick="opt.value='01';mode='natural';load()">Opción 01</button><button onclick="opt.value='02';mode='natural';load()">Opción 02</button><button onclick="opt.value='03';mode='natural';load()">Opción 03</button><button onclick="vp.value='desktop';mode='natural';load()">Escritorio</button><button onclick="vp.value='mobile';mode='natural';load()">Móvil</button><button onclick="vp.value='small';mode='natural';load()">320 px</button><button onclick="gest.value='opening';mode='natural';load()">Entrada</button><button onclick="gest.value='post';mode='natural';load()">Post</button><button id="before">Antes</button><button id="during">Durante</button><button id="after">Después</button><button id="natural">Carga natural</button><button id="scroll">Scroll normal al post</button><span id="status">Listo</span><span id="checks"></span></header><iframe id="screen" title="Página real bajo prueba"></iframe><script>
+const f=document.querySelector('iframe'), status=document.querySelector('#status');
+const opt=document.querySelector('#opt'), vp=document.querySelector('#viewport'), gest=document.querySelector('#gesture');
+let mode='natural',sample=0,tick;
+function load(){f.name='';clearTimeout(tick);document.body.className=vp.value;f.src='../../'+opt.value+'/index.html?qa='+Date.now();}
+addEventListener('message',e=>{if(e.source===f.contentWindow&&e.data?.type==='gtl-opening-ready'&&mode==='natural')f.contentWindow.postMessage({type:'gtl-opening-visibility',visible:true},location.origin);});
+f.onload=()=>{
+ const w=f.contentWindow,d=f.contentDocument;
+ if(mode==='sample'){const nativeTimer=w.setTimeout.bind(w);w.setTimeout=(fn,ms,...args)=>ms===2600?0:nativeTimer(fn,ms,...args);w.postMessage({type:'gtl-opening-visibility',visible:true},location.origin);}
+
+ setTimeout(()=>{document.querySelector("#checks").textContent=` · ancho ${w.innerWidth}/${d.documentElement.scrollWidth} · fotos ${[...d.images].filter(i=>i.complete&&i.naturalWidth>0).length}/${d.images.length} · reduce ${w.matchMedia("(prefers-reduced-motion: reduce)").matches}`;},700);
+ if(gest.value==='post')w.scrollTo(0,d.querySelector('.sf-post').getBoundingClientRect().top+w.scrollY-30);
+ if(mode==='natural'){status.textContent='Natural · '+vp.value+' · '+opt.value;return;}
+ let attempts=0;function freeze(){
+  const node=d.querySelector('[data-gesture="'+gest.value+'"]'), a=node.getAnimations({subtree:true});
+  if(!a.length&&attempts++<90){tick=setTimeout(freeze,16);return;}
+  a.forEach(x=>{x.pause();x.currentTime=sample;});
+  // The production cleanup timer is 2300ms. Keep the real CSS animation alive only in this QA document.
+  status.textContent='Fotograma '+gest.value+' · '+sample+' ms · '+a.length+' animaciones';
+ }
+ freeze();
+};
+for(const [id,ms] of [['before',0],['during',650],['after',2150]])document.getElementById(id).onclick=()=>{mode='sample';sample=ms;load();};
+document.querySelector('#natural').onclick=()=>{mode='natural';load();};
+document.querySelector('#scroll').onclick=()=>{f.contentWindow.scrollBy({top:650,behavior:'smooth'});status.textContent='Scroll nativo +650 px';};
+opt.onchange=vp.onchange=gest.onchange=()=>{mode='natural';load();};load();
+</script></html>

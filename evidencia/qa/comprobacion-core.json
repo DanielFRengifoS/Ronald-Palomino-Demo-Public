@@ -1,0 +1,15 @@
+{
+  "cambio": "Núcleo visual de los heroes",
+  "opciones": [
+    "01",
+    "02",
+    "03"
+  ],
+  "copy": [
+    "Campeón panamericano",
+    "Rumbo a Los Ángeles 2028.",
+    "El sueño olímpico."
+  ],
+  "verificacion_visual": "Escritorio y móvil 390 px, capturas core-*",
+  "portada_selector_agendas_motion": "sin cambios frente al ZIP previo"
+}
